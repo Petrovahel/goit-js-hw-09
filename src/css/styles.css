@@ -14,3 +14,93 @@
 @import url('./header.css');
 @import url('./badges.css');
 @import url('./back-link.css');
+
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  padding: 24px 156px;
+  list-style: none;
+  justify-content: center;
+}
+
+.gallery-item {
+  flex: 0 1 calc(33.33% - 156px);
+  box-sizing: border-box;
+
+  transform: scale(1);
+  transition: transform 0.3s ease;
+}
+
+.gallery-item:hover {
+  transform: scale(1.05);
+}
+
+.gallery-image {
+  max-width: 360px;
+  max-height: 200px;
+  object-fit: cover;
+  display: block;
+}
+
+/* Form */
+.feedback-form {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: 8px;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+  font-family: 'Montserrat', sans-serif;
+}
+input,
+textarea {
+  max-width: 360px;
+}
+textarea {
+  max-height: 80px;
+}
+button {
+  border: none;
+  border-radius: 8px;
+  padding: 8px 16px;
+  width: 95px;
+  height: 40px;
+  background: #4e75ff;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #fff;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #6c8cff;
+}
