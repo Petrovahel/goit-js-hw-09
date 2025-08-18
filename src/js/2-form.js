@@ -24,14 +24,17 @@ form.addEventListener('input', event => {
 });
 
 form.addEventListener('submit', event => {
-  event.preventDefault();
+    event.preventDefault();
+    
+    const email = formData.email.trim();
+  const message = formData.message.trim();
 
-  if (!formData.email || !formData.message) {
+  if (!email || !message) {
     alert('Fill please all fields');
     return;
   }
 
-  console.log(formData);
+   console.log({ email, message });
 
   localStorage.removeItem('feedback-form-state');
   formData.email = "";
